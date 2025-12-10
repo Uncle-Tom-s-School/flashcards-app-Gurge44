@@ -1,16 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-  font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-  width: 100%;
-  min-height: 100vh;
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #FC00FF, #00DBDE) no-repeat fixed;
+}
+
+/* Szívből utálom a css-t */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.points-div {
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.back-main {
+    margin-top: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-gap: 1em;
+    font-weight: bold;
+}
+
+.buttons-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.correct-td {
+    color: #66CB92;
+
+    > button {
+        background: none;
+        border: none;
+        color: #66CB92;
+        font-size: xxx-large;
+        cursor: pointer;
+    }
+}
+
+.incorrect-td {
+    color: #FF9396;
+
+    > button {
+        background: none;
+        border: none;
+        color: #FF9396;
+        font-size: xxx-large;
+        cursor: pointer;
+    }
+}
+
+.progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+}
+
+progress {
+    color: #66CB92;
+}
+
+
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+
+    border-radius: 10px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+#btnControl:checked + label > .flip-card .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.flip-card-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
 }
