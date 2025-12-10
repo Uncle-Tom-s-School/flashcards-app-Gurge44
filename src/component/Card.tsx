@@ -38,7 +38,8 @@ const Card = () => {
                         </div>
                         <div className="flip-card-back">
                             <div className="points-div" style={{
-                                backgroundColor: (json[cardIdx].points > 0 ? "#66CB92" : json[cardIdx].points < 0 ? "#FF9396" : "white")
+                                backgroundColor: (json[cardIdx].points > 0 ? "#66CB92" : json[cardIdx].points < 0 ? "#FF9396" : "white"),
+                                color: (json[cardIdx].points === 0 ? "black" : "white")
                             }}>
                                 <p className="points-p">{json[cardIdx].points}</p>
                             </div>
