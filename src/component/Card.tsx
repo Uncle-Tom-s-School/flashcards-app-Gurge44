@@ -52,13 +52,15 @@ const Card = () => {
                                             <tr>
                                                 <td className="correct-td">
                                                     <p>Eltaláltam</p>
-                                                    <button onClick={() => setCardIdx(prev => (prev + 1) % json.length)}><i
-                                                        className="fa-regular fa-circle-check"></i></button>
+                                                    <button onClick={() => setCardIdx(prev => (prev + 1) % json.length)}>
+                                                        <i className="fa-regular fa-circle-check"></i>
+                                                    </button>
                                                 </td>
                                                 <td className="incorrect-td">
                                                     <p>Nem sikerült</p>
-                                                    <button onClick={() => setCardIdx(prev => (prev + 1) % json.length)}><i
-                                                        className="fa-regular fa-circle-xmark"></i></button>
+                                                    <button onClick={() => setCardIdx(prev => (prev + 1) % json.length)}>
+                                                        <i className="fa-regular fa-circle-xmark"></i>
+                                                    </button>
                                                 </td>
                                             </tr>
                                         </tbody>
