@@ -22,7 +22,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 .points-div {
@@ -82,6 +82,71 @@ main {
 
 progress {
     color: #66CB92;
+}
+
+.more-buttons {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.new-card-button, .more-buttons > button {
+    float: right;
+    margin: 5px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+
+.newcard-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    > h1 {
+        color: white;
+        margin-bottom: 30px;
+    }
+
+    > div {
+        background-color: white;
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        > div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            > div {
+                text-align: center;
+                font-weight: bold;
+
+                > textarea {
+                    height: 100px;
+                }
+            }
+        }
+
+        > button {
+            background: #66CB92;
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    }
 }
 
 

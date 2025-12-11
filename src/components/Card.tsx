@@ -76,6 +76,12 @@ const Card = () => {
                     <p className="progress-bar">{cardIdx + 1} / {json.length}</p>
                     <progress value={cardIdx + 1} max={json.length}></progress>
                 </div>
+
+                <div className="more-buttons">
+                    <button onClick={() => {setCardIdx(0)}}>
+                        Új gyakorlás indítása
+                    </button>
+                </div>
             </label>
         </main>
 );
